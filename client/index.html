@@ -1,0 +1,23 @@
+<head>
+	<title>What Do, Mansfield? (PROTOTYPE)</title>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Mansfield Tonight</h1>
+		</header>
+
+		<div class="upcomingContainer">
+			{{#each events}}
+				{{> shortEvent}}
+			{{/each}}
+		</div>
+		<div class="userDiv">
+			{{> newEvent}}
+		</div>
+		<div class="details">
+			<p> Selected event goes here. </p>
+		</div>
+	</div>
+</body>
