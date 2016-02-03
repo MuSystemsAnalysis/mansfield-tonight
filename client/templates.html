@@ -10,18 +10,24 @@
 		<b>{{title}}</b><br>
 		<p>{{longSummary}}</p><br>
 		Price: {{price}}<br>
-		Organizer: {{organizer}}<br>
+		Venue: {{venue}}<br>
+		{{#if adultOnly}}
+			<b>21+ only</b><br>
+		{{/if}}
+
 	</div>
 </template>
 
 <template name="newEvent">
 	<h4>Add a new event:</h4>
 	<form class="new-event">
-		<input type="text" name="title" placeholder="Event Title"/><br>
-		<input type="text" name="summary" placeholder="Summary"/><br>
-		<input type="text" name="longSummary" placeholder="Full Description"/><br>
-		<input type="text" name="price" placeholder="$$$?"/><br>
-		<input type="text" name="organizer" placeholder="Organization"/><br>
+		Title: <input type="text" name="title" placeholder="Event Title"/><br>
+		Summary: <input type="text" name="summary" placeholder="Summary"/><br>
+		Full Description: <input type="text" name="longSummary" placeholder="Full Description"/><br>
+		Price: <input type="text" name="price" placeholder="$$$?"/><br>
+		21+ Only? <input type="checkbox" checked="adultOnly"/><br>
+		Date: <input type="date" name="date"/><br>
+		Venue: <input type="text" name="venue" placeholder="Address & Venue Name"/><br>
 		<input type="submit" title="submit" value="Submit"/>
 	</form>
 </template>
