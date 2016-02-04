@@ -1,17 +1,18 @@
 Template.body.helpers({
 	events: function() {
-		return Events.find({}, {sort:{createdAt: -1}});
+		return Events.find({});
 	}
 });
 
 Template.body.events({
 	"submit .new-event": function (event) {
 		event.preventDefault();
+
 		var title = event.target.title.value;
 		var summary = event.target.summary.value;
 		var longSummary = event.target.longSummary.value;
 		var price = event.target.price.value;
-		var adultOnly = event.target.adultOnly.value;
+		// var adultOnly = event.target.adultOnly.value;
 		var date = event.target.date.value;
 		var venue = event.target.venue.value;
 
@@ -20,10 +21,10 @@ Template.body.events({
 			summary : summary,
 			longSummary : longSummary,
 			price : price,
-			venue : venue,
+			// adultOnly : adultOnly,
 			date : date,
-			adultOnly : adultOnly,
-			createdAt : new Date()
+			venue : venue,
+			// createdAt : new Date()
 		});
 
 		for (field of event.target) {

@@ -11,9 +11,9 @@
 		<p>{{longSummary}}</p><br>
 		Price: {{price}}<br>
 		Venue: {{venue}}<br>
-		{{#if adultOnly}}
+		<!-- {{#if adultOnly}}
 			<b>21+ only</b><br>
-		{{/if}}
+		{{/if}} -->
 
 	</div>
 </template>
@@ -27,7 +27,7 @@
 		Price: <input type="text" name="price" placeholder="$$$?"/><br>
 		21+ Only? <input type="checkbox" checked="adultOnly"/><br>
 		Date: <input type="date" name="date"/><br>
-		Venue: <input type="text" name="venue" placeholder="Address & Venue Name"/><br>
-		<input type="submit" title="submit" value="Submit"/>
+		Venue: <input type="text" name="venue" placeholder="Address and/or Venue Name"/><br>
+		<input type="submit" id="submit" value="Submit"/>
 	</form>
 </template>
