@@ -16,16 +16,18 @@ Template.body.events({
 		var date = event.target.date.value;
 		var venue = event.target.venue.value;
 
-		Events.insert({
-			title : title,
-			summary : summary,
-			longSummary : longSummary,
-			price : price,
-			// adultOnly : adultOnly,
-			date : date,
-			venue : venue,
-			// createdAt : new Date()
-		});
+		if (title && summary && date && venue) {
+			Events.insert({
+				title : title,
+				summary : summary,
+				longSummary : longSummary,
+				price : price,
+				// adultOnly : adultOnly,
+				date : date,
+				venue : venue,
+				// createdAt : new Date()
+			});
+		}
 
 		for (field of event.target) {
 			if (field.value !== "Submit") {
