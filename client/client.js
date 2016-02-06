@@ -1,6 +1,6 @@
 Template.body.helpers({
 	events: function() {
-		return Events.find({});
+		return Events.find({}, {sort: {date: -1}});
 	}
 });
 
@@ -36,3 +36,7 @@ Template.body.events({
 		}
 	}
 });
+
+Template.newEvent.rendered = function() {
+	$('#my-datepicker').datepicker();
+}
