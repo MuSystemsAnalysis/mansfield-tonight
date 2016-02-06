@@ -12,7 +12,7 @@ Template.body.events({
 		var summary = event.target.summary.value;
 		var longSummary = event.target.longSummary.value;
 		var price = event.target.price.value;
-		// var adultOnly = event.target.adultOnly.value;
+		var adultOnly = event.target.adultOnly.value;
 		var date = event.target.date.value;
 		var venue = event.target.venue.value;
 
@@ -22,16 +22,16 @@ Template.body.events({
 				summary : summary,
 				longSummary : longSummary,
 				price : price,
-				// adultOnly : adultOnly,
+				adultOnly : adultOnly,
 				date : date,
 				venue : venue,
-				// createdAt : new Date()
+				createdAt : new Date()
 			});
-		}
 
-		for (field of event.target) {
-			if (field.value !== "Submit") {
-				field.value = "";
+			for (field of event.target) {
+				if (field.value !== "Submit") {
+					field.value = "";
+				}
 			}
 		}
 	}
