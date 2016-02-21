@@ -3,8 +3,10 @@
 		<b>{{title}}</b><br>
 		{{summary}} <br>
 		{{#if adultOnly}}
-			<b>21+ only</b><br>
+			<b>21+ Only</b><br>
 		{{/if}}
+		<button class="viewLong">VIEW</button>
+		<button class="delete">&times;</button>
 	</div>
 </template>
 
@@ -29,7 +31,11 @@
 		Summary: <input type="text" name="summary" placeholder="Summary"/><br>
 		Full Description: <input type="text" name="longSummary" placeholder="Full Description"/><br>
 		Price: <input type="text" name="price" placeholder="$$$?"/><br>
-		21+ Only? <input type="checkbox" name="adultOnly" value="adultOnly"/><br>
+		<input type="hidden" name="adultOnly" value="false"/>
+		<div id="twenty-one-plus-box">
+			21+ Only? <input type="radio" name="adultOnly" value="true"/><br>
+			All Ages? <input type="radio" name="adultOnly" value="" checked/><br>
+		</div>
 		Date: <input type="text" name="date" class="form-control" id="my-datepicker"/><br>
 		Venue: <input type="text" name="venue" placeholder="Address and/or Venue Name"/><br>
 		<input type="submit" id="submit" value="Submit"/>
